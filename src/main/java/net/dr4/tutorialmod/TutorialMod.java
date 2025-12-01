@@ -1,6 +1,7 @@
 package net.dr4.tutorialmod;
 
 import net.dr4.tutorialmod.block.ModBlocks;
+import net.dr4.tutorialmod.item.ModCreativeModeTabs;
 import net.dr4.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,6 +37,8 @@ public class TutorialMod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

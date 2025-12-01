@@ -2,9 +2,11 @@ package net.dr4.tutorialmod.block;
 
 import net.dr4.tutorialmod.TutorialMod;
 import net.dr4.tutorialmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
@@ -24,7 +26,8 @@ public class ModBlocks {
                     .sound(SoundType.AMETHYST)));
 
     public static final DeferredBlock<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(2,5),
+                    BlockBehaviour.Properties.of()
                     .strength(3f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.STONE)));
