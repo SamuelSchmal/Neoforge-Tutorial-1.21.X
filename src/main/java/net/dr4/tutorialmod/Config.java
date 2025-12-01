@@ -1,4 +1,4 @@
-package net.dr4.tutorialmod.examplemod;
+package net.dr4.tutorialmod;
 
 import java.util.List;
 

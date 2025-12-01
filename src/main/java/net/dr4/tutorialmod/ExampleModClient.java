@@ -1,4 +1,4 @@
-package net.dr4.tutorialmod.examplemod;
+package net.dr4.tutorialmod;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
